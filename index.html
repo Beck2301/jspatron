@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://nextparticle.nextco.de/nextparticle.min.js"></script>
+</head>
+<body>
+    <img id="logo" src="https://scontent.fsal5-1.fna.fbcdn.net/v/t1.0-9/123657079_3485933661497606_5769380747742582383_n.jpg?_nc_cat=107&ccb=2&_nc_sid=09cbfe&_nc_ohc=JD-pDwkNPSMAX-fDeDu&_nc_ht=scontent.fsal5-1.fna&oh=58105edc61dbf3d86613dfb112abedf1&oe=5FCD35AA">
+</body>
+
+<style>
+    body{
+	background: #212121;
+	overflow-x: hidden
+}
+
+#logo{
+	display: none
+}
+</style>
+
+
+<script>
+    let particle = new NextParticle({
+  image: document.all.logo,
+  addTimestamp: true,
+  width: window.innerWidth,
+  height: window.innerHeight,
+  particleGap: 2,
+  particleSize: 1
+});
+
+
+window.onresize = _=>{
+  particle.width = window.innerWidth
+  particle.height = window.innerHeight
+  particle.start({
+    initPosition: 'none',
+    initDirection: 'none',
+  })
+ 
+}
+</script>
+
+</html>
